@@ -1,0 +1,414 @@
+/* custom-invitation.css */
+
+/* Importar fuentes premium */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --invitation-bg: #0A0A0A;
+    --invitation-card-bg: #121212;
+    --invitation-accent-gold: #C5A059;
+    --invitation-text-cream: #F5F1E6;
+    --invitation-text-subtle: #999999;
+    --invitation-border: rgba(197, 160, 89, 0.4);
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+.custom-invitation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--invitation-bg);
+    /* Sutil trama de constelaciones y textura */
+    background-image:
+        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23C5A059" fill-opacity="0.05"%3E%3Cpath d="M50 40a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM20 70a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm10-30a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm10 50a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm30-20a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm20 30a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-10-60a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
+        url('https://www.transparenttextures.com/patterns/dark-fabric.png');
+    font-family: var(--font-sans);
+    color: var(--invitation-text-cream);
+    padding: 20px;
+}
+
+.custom-invitation-card {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--invitation-card-bg);
+    border: 1px solid var(--invitation-border);
+    border-radius: 4px;
+    /* Sutil redondeo */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+/* Esquinas decorativas refinadas */
+.custom-decoration {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.custom-decoration-tl {
+    top: 10px;
+    left: 10px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath d="M0 0v10l10-10H0zm20 0l10 10V0H20zM0 20v10h10L0 20zm20 30h10V20H20z" fill="%23C5A059"/%3E%3C/svg%3E');
+}
+
+.custom-decoration-tr {
+    top: 10px;
+    right: 10px;
+    transform: rotate(90deg);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath d="M0 0v10l10-10H0zm20 0l10 10V0H20zM0 20v10h10L0 20zm20 30h10V20H20z" fill="%23C5A059"/%3E%3C/svg%3E');
+}
+
+.custom-decoration-bl {
+    bottom: 10px;
+    left: 10px;
+    transform: rotate(-90deg);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath d="M0 0v10l10-10H0zm20 0l10 10V0H20zM0 20v10h10L0 20zm20 30h10V20H20z" fill="%23C5A059"/%3E%3C/svg%3E');
+}
+
+.custom-decoration-br {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath d="M0 0v10l10-10H0zm20 0l10 10V0H20zM0 20v10h10L0 20zm20 30h10V20H20z" fill="%23C5A059"/%3E%3C/svg%3E');
+}
+
+.custom-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+}
+
+.custom-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.custom-host-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--invitation-text-subtle);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.custom-celebrant-name {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--invitation-text-cream);
+    line-height: 1;
+    margin: 0;
+}
+
+.custom-event-subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--invitation-accent-gold);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.custom-main-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.custom-details-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.custom-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-detail-icon {
+    font-size: 20px;
+    color: var(--invitation-accent-gold);
+}
+
+.custom-detail-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: var(--invitation-text-cream);
+}
+
+.custom-detail-text span {
+    display: block;
+}
+
+.custom-detail-divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--invitation-border);
+}
+
+.custom-date-item .custom-detail-text span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--invitation-accent-gold);
+}
+
+.custom-time-detail {
+    font-size: 11px;
+    color: var(--invitation-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.custom-location-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+}
+
+.custom-location-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.custom-location-address {
+    font-size: 12px;
+    color: var(--invitation-text-subtle);
+}
+
+.custom-map-button {
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--invitation-accent-gold);
+    color: var(--invitation-accent-gold);
+    padding: 10px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.custom-map-button:hover {
+    background-color: var(--invitation-accent-gold);
+    color: var(--invitation-card-bg);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+}
+
+.custom-footer {
+    text-align: center;
+}
+
+.custom-confirmation-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--invitation-accent-gold);
+    margin-bottom: 8px;
+}
+
+.custom-confirmation-deadline {
+    font-size: 12px;
+    color: var(--invitation-text-subtle);
+    margin-bottom: 15px;
+}
+
+.custom-contact-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.custom-contact-label {
+    font-size: 12px;
+    color: var(--invitation-text-subtle);
+}
+
+.custom-contact-number {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--invitation-text-cream);
+    text-decoration: none;
+    border-bottom: 1px solid var(--invitation-border);
+    transition: color 0.3s ease;
+}
+
+.custom-contact-number:hover {
+    color: var(--invitation-accent-gold);
+}
+
+/* --- ESTILOS PARA LA BIENVENIDA --- */
+
+.welcome-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.welcome-card {
+    background-color: var(--invitation-card-bg);
+    border: 1px solid var(--invitation-border);
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.welcome-label {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    color: var(--invitation-accent-gold);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.welcome-divider {
+    width: 40px;
+    height: 1px;
+    background-color: var(--invitation-accent-gold);
+    margin: 0 auto 30px;
+}
+
+.welcome-name {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: var(--invitation-text-cream);
+}
+
+.welcome-text {
+    font-size: 13px;
+    color: var(--invitation-text-subtle);
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.welcome-event {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--invitation-accent-gold);
+    margin-bottom: 40px;
+}
+
+.explore-button {
+    background: transparent;
+    border: 1px solid var(--invitation-accent-gold);
+    color: var(--invitation-accent-gold);
+    padding: 12px 25px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.explore-button:hover {
+    background-color: var(--invitation-accent-gold);
+    color: var(--invitation-card-bg);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+}
+
+/* --- ANIMACIONES --- */
+
+.animate-fade-in {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   NUEVAS ANIMACIONES Y PANTALLA DE INICIO
+   ========================================= */
+
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Clases de animación que se activan al renderizar */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fotogramas clave de las transiciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
